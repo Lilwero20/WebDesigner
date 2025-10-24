@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>WeroDev | Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://cdn.jsdelivr.net/npm/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+</head>
+<body>
+    <header class="header">
+        <a href="#home" class="logo">WeroDev</a>
+        <nav class="navbar" role="navigation" aria-label="Main">
+            <a href="#home" class="active">Home</a>
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="#portfolio">Portfolio</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <section id="home" class="home reveal">
+        <div class="home-content">
+            <h1>Hi, I'm <span>Wero</span></h1>
+            <div class="typing-text" aria-live="polite"><span class="text"></span><span class="cursor"></span></div>
+            <p>A passionate frontend developer crafting modern, responsive and interactive websites.</p>
+            <div class="btn-box">
+                <a href="#services">Hire Me</a>
+                <a href="#contact">Let's Talk</a>
+            </div>
+        </div>
+
+        <div class="home-image">
+            <img src="perfil.png" alt="Wero profile">
+        </div>
+    </section>
+
+    <section id="about" class="about section reveal">
+        <h2 class="section-title">About Me</h2>
+        <p class="section-text">I’m a self-taught frontend developer focused on creating smooth user experiences and beautiful UI designs. I love working with HTML, CSS, JavaScript, and exploring new technologies.</p>
+    </section>
+
+    <section id="services" class="services section reveal">
+        <h2 class="section-title">Services</h2>
+        <div class="services-container">
+            <div class="service-box">
+                <i class="bx bx-code-alt"></i>
+                <h3>Web Development</h3>
+                <p>Building responsive, fast and beautiful websites.</p>
+            </div>
+            <div class="service-box">
+                <i class="bx bx-paint"></i>
+                <h3>UI/UX Design</h3>
+                <p>Designing intuitive interfaces and prototypes.</p>
+            </div>
+            <div class="service-box">
+                <i class="bx bx-rocket"></i>
+                <h3>Performance</h3>
+                <p>Optimization and performance improvements.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="portfolio" class="portfolio section reveal">
+        <h2 class="section-title">Portfolio</h2>
+        <div class="portfolio-grid">
+            <article class="portfolio-card">
+                <div class="card-media">
+                    <img src="https://via.placeholder.com/800x500?text=Project+1" alt="Project 1 screenshot" />
+                    <div class="card-overlay">
+                        <button class="card-btn" onclick="window.open('#', '_blank')" aria-label="Ver proyecto 1">Ver</button>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <h3>Project One</h3>
+                    <p>Landing page responsive con animaciones y rendimiento optimizado.</p>
+                    <div class="card-tags">
+                        <span>HTML</span><span>CSS</span><span>JS</span>
+                    </div>
+                </div>
+            </article>
+
+            <article class="portfolio-card">
+                <div class="card-media">
+                    <img src="https://via.placeholder.com/800x500?text=Project+2" alt="Project 2 screenshot" />
+                    <div class="card-overlay">
+                        <button class="card-btn" onclick="window.open('#', '_blank')" aria-label="Ver proyecto 2">Ver</button>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <h3>Project Two</h3>
+                    <p>Web app con diseño de interfaz y manejo de estado simple.</p>
+                    <div class="card-tags">
+                        <span>React</span><span>CSS</span>
+                    </div>
+                </div>
+            </article>
+
+            <article class="portfolio-card">
+                <div class="card-media">
+                    <img src="https://via.placeholder.com/800x500?text=Project+3" alt="Project 3 screenshot" />
+                    <div class="card-overlay">
+                        <button class="card-btn" onclick="window.open('#', '_blank')" aria-label="Ver proyecto 3">Ver</button>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <h3>Project Three</h3>
+                    <p>Prototipo interactivo con microinteracciones y estilos consistentes.</p>
+                    <div class="card-tags">
+                        <span>Figma</span><span>HTML</span>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <section id="contact" class="contact section reveal">
+        <h2 class="section-title">Contact Me</h2>
+        <p class="section-text">Interested in working together? Choose your preferred method below.</p>
+
+        <div class="contact-methods">
+            <a class="contact-link email" href="mailto:guerovasir13@gmail.com?subject=Contacto%20desde%20portfolio%20WeroDev&body=Hola%20Wero%2C%0A%0AMe%20interesa%20tu%20servicio%20de%20...%0A%0ASaludos%2C%0A" aria-label="Enviar correo a guerovasir13@gmail.com" target="_blank" rel="noopener">
+                <i class="bx bx-envelope"></i>
+                <div class="contact-text">
+                    <span class="label">Email</span>
+                    <small>guerovasir13@gmail.com</small>
+                </div>
+            </a>
+
+            <a class="contact-link whatsapp" href="https://wa.me/528714616250?text=Hola%20Wero!%20Estoy%20interesado%20en%20tus%20servicios." aria-label="Enviar WhatsApp a +52 8714616250" target="_blank" rel="noopener">
+                <i class="bx bxl-whatsapp"></i>
+                <div class="contact-text">
+                    <span class="label">WhatsApp</span>
+                    <small>+52 871 461 6250</small>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>© 2025 WeroDev. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        const reveals = document.querySelectorAll('.reveal');
+        const revealOnScroll = () => {
+            for (const el of reveals) {
+                const windowHeight = window.innerHeight;
+                const top = el.getBoundingClientRect().top;
+                const threshold = 120;
+                if (top < windowHeight - threshold) el.classList.add('active'); else el.classList.remove('active');
+            }
+        };
+        window.addEventListener('scroll', revealOnScroll);
+        revealOnScroll();
+
+        (function typingEffect(){
+            const textEl = document.querySelector('.typing-text .text');
+            if (!textEl) return;
+            const words = ["Frontend Developer","UI Designer","Web Creator"];
+            let wIndex = 0, cIndex = 0, deleting = false;
+            const typeSpeed = 90;
+            const deleteSpeed = 40;
+            const pauseAfter = 1400;
+            function tick(){
+                const current = words[wIndex];
+                if (!deleting){
+                    cIndex++;
+                    textEl.textContent = current.slice(0, cIndex);
+                    if (cIndex === current.length){
+                        deleting = true;
+                        setTimeout(tick, pauseAfter);
+                        return;
+                    }
+                    setTimeout(tick, typeSpeed);
+                } else {
+                    cIndex--;
+                    textEl.textContent = current.slice(0, cIndex);
+                    if (cIndex === 0){
+                        deleting = false;
+                        wIndex = (wIndex + 1) % words.length;
+                        setTimeout(tick, 300);
+                        return;
+                    }
+                    setTimeout(tick, deleteSpeed);
+                }
+            }
+            tick();
+        })();
+    </script>
+</body>
+</html>

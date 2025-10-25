@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="style.css" />
     <link href="https://cdn.jsdelivr.net/npm/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
 </head>
+
 <body>
     <header class="header">
         <a href="#home" class="logo">WeroDev</a>
@@ -37,7 +38,9 @@
 
     <section id="about" class="about section reveal">
         <h2 class="section-title">About Me</h2>
-        <p class="section-text">I’m a self-taught frontend developer focused on creating smooth user experiences and beautiful UI designs. I love working with HTML, CSS, JavaScript, and exploring new technologies.</p>
+        <p class="section-text">I’m a self-taught frontend developer focused on creating smooth user experiences and beautiful UI designs. I love working with HTML, CSS, JavaScript, and exploring new technologies. My goal is to transform ideas into functional and aesthetic digital experiences that engage users and reflect each brand's identity.</p>
+        <p class="section-text">Throughout my journey, I’ve worked on multiple personal and collaborative projects, building websites that balance performance, accessibility, and design. I’m constantly improving my skills, keeping up with modern frameworks like React and tools such as Figma, GSAP, and TailwindCSS. What drives me is seeing how clean code and thoughtful design can bring a concept to life.</p>
+        <p class="section-text">I also enjoy experimenting with UI animations, color palettes, and responsive layouts, ensuring that every project looks great on any device. My mission is to craft experiences that not only look professional but also feel intuitive and enjoyable to use.</p>
     </section>
 
     <section id="services" class="services section reveal">
@@ -46,17 +49,27 @@
             <div class="service-box">
                 <i class="bx bx-code-alt"></i>
                 <h3>Web Development</h3>
-                <p>Building responsive, fast and beautiful websites.</p>
+                <p>Building responsive, fast and beautiful websites optimized for all devices, with clean code and structured layouts that make maintenance and scalability simple.</p>
             </div>
             <div class="service-box">
                 <i class="bx bx-paint"></i>
                 <h3>UI/UX Design</h3>
-                <p>Designing intuitive interfaces and prototypes.</p>
+                <p>Designing intuitive interfaces and prototypes focused on user behavior, accessibility, and aesthetics. Every design aims to create an effortless and engaging experience.</p>
             </div>
             <div class="service-box">
                 <i class="bx bx-rocket"></i>
                 <h3>Performance</h3>
-                <p>Optimization and performance improvements.</p>
+                <p>Optimization and performance improvements to ensure fast loading times, SEO-friendly structures, and smooth animations that enhance user satisfaction.</p>
+            </div>
+            <div class="service-box">
+                <i class="bx bx-devices"></i>
+                <h3>Responsive Design</h3>
+                <p>Crafting flexible designs that adapt perfectly to mobile, tablet, and desktop screens, ensuring consistency and usability across platforms.</p>
+            </div>
+            <div class="service-box">
+                <i class="bx bx-analyse"></i>
+                <h3>Maintenance & Updates</h3>
+                <p>Keeping websites updated with the latest standards, fixing bugs, and improving performance or features as technologies evolve.</p>
             </div>
         </div>
     </section>
@@ -73,7 +86,7 @@
                 </div>
                 <div class="card-body">
                     <h3>Project One</h3>
-                    <p>Landing page responsive con animaciones y rendimiento optimizado.</p>
+                    <p>Landing page responsive con animaciones y rendimiento optimizado. Creada para presentar una marca de tecnología, incluye efectos sutiles de desplazamiento, paleta de colores moderna y una estructura visual limpia enfocada en la conversión.</p>
                     <div class="card-tags">
                         <span>HTML</span><span>CSS</span><span>JS</span>
                     </div>
@@ -89,7 +102,7 @@
                 </div>
                 <div class="card-body">
                     <h3>Project Two</h3>
-                    <p>Web app con diseño de interfaz y manejo de estado simple.</p>
+                    <p>Web app con diseño de interfaz y manejo de estado simple. Implementa un sistema de componentes reutilizables y animaciones suaves para mejorar la interacción del usuario, integrando prácticas modernas de desarrollo frontend.</p>
                     <div class="card-tags">
                         <span>React</span><span>CSS</span>
                     </div>
@@ -105,7 +118,7 @@
                 </div>
                 <div class="card-body">
                     <h3>Project Three</h3>
-                    <p>Prototipo interactivo con microinteracciones y estilos consistentes.</p>
+                    <p>Prototipo interactivo con microinteracciones y estilos consistentes. Este proyecto destaca por su atención al detalle visual y su fluidez de navegación, ideal para presentar conceptos a clientes o equipos de desarrollo.</p>
                     <div class="card-tags">
                         <span>Figma</span><span>HTML</span>
                     </div>
@@ -119,7 +132,12 @@
         <p class="section-text">Interested in working together? Choose your preferred method below.</p>
 
         <div class="contact-methods">
-            <a class="contact-link email" href="mailto:guerovasir13@gmail.com?subject=Contacto%20desde%20portfolio%20WeroDev&body=Hola%20Wero%2C%0A%0AMe%20interesa%20tu%20servicio%20de%20...%0A%0ASaludos%2C%0A" aria-label="Enviar correo a guerovasir13@gmail.com" target="_blank" rel="noopener">
+            <a class="contact-link email"
+                href="https://mail.google.com/mail/?view=cm&fs=1&to=guerovasir13@gmail.com&su=Contacto%20desde%20portfolio%20WeroDev&body=Hola%20Wero%2C%0A%0AMe%20interesa%20tu%20servicio%20de%20...%0A%0ASaludos%2C%0A"
+                aria-label="Enviar correo a guerovasir13@gmail.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                onclick="var w=window.open(this.href,'_blank'); if(!w){ window.location.href='mailto:guerovasir13@gmail.com?subject=Contacto%20desde%20portfolio%20WeroDev&body=Hola%20Wero%2C%0A%0AMe%20interesa%20tu%20servicio%20de%20...%0A%0ASaludos%2C%0A'; } return false;">
                 <i class="bx bx-envelope"></i>
                 <div class="contact-text">
                     <span class="label">Email</span>
@@ -142,51 +160,128 @@
     </footer>
 
     <script>
-        const reveals = document.querySelectorAll('.reveal');
-        const revealOnScroll = () => {
-            for (const el of reveals) {
-                const windowHeight = window.innerHeight;
-                const top = el.getBoundingClientRect().top;
-                const threshold = 120;
-                if (top < windowHeight - threshold) el.classList.add('active'); else el.classList.remove('active');
-            }
-        };
-        window.addEventListener('scroll', revealOnScroll);
-        revealOnScroll();
+    const reveals = document.querySelectorAll('.reveal');
+    const revealOnScroll = () => {
+        for (const el of reveals) {
+            const windowHeight = window.innerHeight;
+            const top = el.getBoundingClientRect().top;
+            const threshold = 120;
+            if (top < windowHeight - threshold) el.classList.add('active'); else el.classList.remove('active');
+        }
+    };
+    window.addEventListener('scroll', revealOnScroll);
+    revealOnScroll();
 
-        (function typingEffect(){
-            const textEl = document.querySelector('.typing-text .text');
-            if (!textEl) return;
-            const words = ["Frontend Developer","UI Designer","Web Creator"];
-            let wIndex = 0, cIndex = 0, deleting = false;
-            const typeSpeed = 90;
-            const deleteSpeed = 40;
-            const pauseAfter = 1400;
-            function tick(){
-                const current = words[wIndex];
-                if (!deleting){
-                    cIndex++;
-                    textEl.textContent = current.slice(0, cIndex);
-                    if (cIndex === current.length){
-                        deleting = true;
-                        setTimeout(tick, pauseAfter);
-                        return;
-                    }
-                    setTimeout(tick, typeSpeed);
-                } else {
-                    cIndex--;
-                    textEl.textContent = current.slice(0, cIndex);
-                    if (cIndex === 0){
-                        deleting = false;
-                        wIndex = (wIndex + 1) % words.length;
-                        setTimeout(tick, 300);
-                        return;
-                    }
-                    setTimeout(tick, deleteSpeed);
+    (function typingEffect(){
+        const textEl = document.querySelector('.typing-text .text');
+        if (!textEl) return;
+        const words = ["Frontend Developer","UI Designer","Web Creator"];
+        let wIndex = 0, cIndex = 0, deleting = false;
+        const typeSpeed = 90;
+        const deleteSpeed = 40;
+        const pauseAfter = 1400;
+        function tick(){
+            const current = words[wIndex];
+            if (!deleting){
+                cIndex++;
+                textEl.textContent = current.slice(0, cIndex);
+                if (cIndex === current.length){
+                    deleting = true;
+                    setTimeout(tick, pauseAfter);
+                    return;
                 }
+                setTimeout(tick, typeSpeed);
+            } else {
+                cIndex--;
+                textEl.textContent = current.slice(0, cIndex);
+                if (cIndex === 0){
+                    deleting = false;
+                    wIndex = (wIndex + 1) % words.length;
+                    setTimeout(tick, 300);
+                    return;
+                }
+                setTimeout(tick, deleteSpeed);
             }
-            tick();
-        })();
+        }
+        tick();
+    })();
+
+    (function activeNavbarOnScroll(){
+        const navLinks = document.querySelectorAll('.navbar a');
+        const sections = document.querySelectorAll('section[id]');
+
+        if (!navLinks.length || !sections.length) return;
+
+        function setActiveById(id) {
+            navLinks.forEach(link => {
+                const href = link.getAttribute('href') || '';
+                const matches = href === `#${id}`;
+                link.classList.toggle('active', matches);
+                if (matches) link.setAttribute('aria-current','page');
+                else link.removeAttribute('aria-current');
+            });
+        }
+
+        if (location.hash) {
+            const idFromHash = location.hash.replace('#','');
+            const target = document.getElementById(idFromHash);
+            if (target) {
+                history.replaceState(null, '', `#${idFromHash}`);
+                setActiveById(idFromHash);
+            }
+        }
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const id = entry.target.id;
+                    setActiveById(id);
+                    history.replaceState(null, '', `#${id}`);
+                }
+            });
+        }, {
+            threshold: 0.52,
+            rootMargin: '-8% 0px -8% 0px'
+        });
+
+        sections.forEach(s => observer.observe(s));
+
+        navLinks.forEach(link => {
+            link.addEventListener('click', (e) => {
+                const href = link.getAttribute('href');
+                if (!href || !href.startsWith('#')) return;
+                const id = href.slice(1);
+                const target = document.getElementById(id);
+                if (!target) return;
+                e.preventDefault();
+                target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                setActiveById(id);
+                history.replaceState(null, '', `#${id}`);
+            });
+        });
+
+        let scrollTimeout;
+        window.addEventListener('scroll', () => {
+            clearTimeout(scrollTimeout);
+            scrollTimeout = setTimeout(() => {
+                const mid = window.innerHeight / 2;
+                let closest = null;
+                let closestDist = Infinity;
+                sections.forEach(sec => {
+                    const rect = sec.getBoundingClientRect();
+                    const dist = Math.abs(rect.top + rect.height/2 - mid);
+                    if (dist < closestDist) {
+                        closestDist = dist;
+                        closest = sec;
+                    }
+                });
+                if (closest) {
+                    setActiveById(closest.id);
+                }
+            }, 50);
+        });
+
+    })();
     </script>
 </body>
 </html>
